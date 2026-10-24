@@ -1,0 +1,9 @@
+case_id,media_path,media_type,condition,ground_truth_plate,ground_truth_boxes_xyxy,detected,raw_ocr_text,normalized_ocr_text,ocr_exact_match,detection_confidence,ocr_confidence,processing_seconds,frame_number,timestamp_seconds,notes
+1,,,,clear_daylight,,,,,,,,,,,
+2,,,,low_light,,,,,,,,,,,
+3,,,,tilted_plate,,,,,,,,,,,
+4,,,,blurry,,,,,,,,,,,
+5,,,,distant_vehicle,,,,,,,,,,,
+6,,,,partially_occluded,,,,,,,,,,,
+7,,,,no_plate,,,,,,,,,,,
+8,,,,video_input,,,,,,,,,,,

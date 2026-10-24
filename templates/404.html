@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block title %}Unavailable | Platewatch{% endblock %}{% block content %}<div class="empty-state error-state"><span>!</span><h1>Page unavailable</h1><p>{{ message or 'The requested page or record could not be found.' }}</p><a class="btn btn-accent" href="{{ url_for('main.dashboard') }}">Back to overview</a></div>{% endblock %}

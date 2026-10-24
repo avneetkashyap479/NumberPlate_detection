@@ -1,0 +1,7 @@
+{
+  "status": "not_run",
+  "model": null,
+  "dataset": null,
+  "note": "No model, ground-truth annotations, or media were supplied. Metrics are intentionally not fabricated.",
+  "cases": []
+}
