@@ -171,4 +171,5 @@ def detection_file(job_id, kind, detection_id):
         path = None
     if not path or not _within_managed(path, current_app.config["SETTINGS"]) or not Path(path).is_file():
         return _error("Managed output not found.", 404)
-    return send_file(path, as_attachment=kind in ("crop", "annotated", "video"))
+    as_attachment = request.args.get("download", "").lower() in ("1", "true")
+    return send_file(path, as_attachment=as_attachment)

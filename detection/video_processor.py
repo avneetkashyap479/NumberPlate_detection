@@ -21,7 +21,11 @@ def process_video(video_path, job_id, settings, detector=None, ocr=None):
     width = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
     output_path = Path(settings.VIDEO_OUTPUT_DIR) / f"{job_id}_annotated.mp4"
-    writer = cv2.VideoWriter(str(output_path), cv2.VideoWriter_fourcc(*"mp4v"), fps, (width, height))
+    fourcc = cv2.VideoWriter_fourcc(*"avc1")
+    writer = cv2.VideoWriter(str(output_path), fourcc, fps, (width, height))
+    if not writer.isOpened():
+        fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+        writer = cv2.VideoWriter(str(output_path), fourcc, fps, (width, height))
     detector = detector or PlateDetector(settings.MODEL_PATH, settings.CONFIDENCE_THRESHOLD)
     ocr = ocr or OCREngine(settings.OCR_LANGUAGES)
     detections, frame_number = [], 0

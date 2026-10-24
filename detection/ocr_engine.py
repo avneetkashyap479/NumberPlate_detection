@@ -1,5 +1,13 @@
+import os
 import cv2
 import numpy as np
+
+try:
+    import certifi
+    if "SSL_CERT_FILE" not in os.environ:
+        os.environ["SSL_CERT_FILE"] = certifi.where()
+except ImportError:
+    pass
 
 
 class OCREngine:

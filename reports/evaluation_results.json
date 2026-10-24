@@ -1,7 +1,518 @@
 {
-  "status": "not_run",
-  "model": null,
-  "dataset": null,
-  "note": "No model, ground-truth annotations, or media were supplied. Metrics are intentionally not fabricated.",
-  "cases": []
+  "status": "completed",
+  "model": "best.pt",
+  "dataset": "datasets/plates",
+  "evaluated_images": 50,
+  "metrics": {
+    "iou_threshold": 0.5,
+    "true_positives": 45,
+    "false_positives": 1,
+    "false_negatives": 5,
+    "precision": 0.9782608695652174,
+    "recall": 0.9,
+    "f1": 0.9375,
+    "mean_character_accuracy": 0.3903
+  },
+  "cases_sample": [
+    {
+      "file_name": "in_plate_val_0000.jpg",
+      "detection_confidence": 0.2786102890968323,
+      "predicted_box": [
+        85,
+        184,
+        659,
+        471
+      ],
+      "ground_truth_boxes": [
+        [
+          91,
+          192,
+          659,
+          455
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "IND",
+      "ocr_confidence": 0.5167330860514854,
+      "character_accuracy": 0.0,
+      "duration_seconds": 0.815
+    },
+    {
+      "file_name": "in_plate_val_0001.jpg",
+      "detection_confidence": 0.2747361660003662,
+      "predicted_box": [
+        13,
+        131,
+        602,
+        425
+      ],
+      "ground_truth_boxes": [
+        [
+          21,
+          145,
+          598,
+          408
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "HHOZER9494",
+      "ocr_confidence": 0.32376427505150507,
+      "character_accuracy": 0.6,
+      "duration_seconds": 0.022
+    },
+    {
+      "file_name": "in_plate_val_0002.jpg",
+      "detection_confidence": 0.2862260937690735,
+      "predicted_box": [
+        132,
+        429,
+        317,
+        524
+      ],
+      "ground_truth_boxes": [
+        [
+          137,
+          426,
+          320,
+          527
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "49L",
+      "ocr_confidence": 0.35514968633651733,
+      "character_accuracy": 0.1,
+      "duration_seconds": 0.037
+    },
+    {
+      "file_name": "in_plate_val_0003.jpg",
+      "detection_confidence": 0.26139816641807556,
+      "predicted_box": [
+        120,
+        426,
+        307,
+        526
+      ],
+      "ground_truth_boxes": [
+        [
+          126,
+          426,
+          306,
+          525
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "494",
+      "ocr_confidence": 0.8306742453447372,
+      "character_accuracy": 0.2,
+      "duration_seconds": 0.03
+    },
+    {
+      "file_name": "in_plate_val_0004.jpg",
+      "detection_confidence": 0.27253326773643494,
+      "predicted_box": [
+        108,
+        431,
+        291,
+        531
+      ],
+      "ground_truth_boxes": [
+        [
+          113,
+          430,
+          292,
+          530
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "FKHO2ER9494",
+      "ocr_confidence": 0.34585090958855946,
+      "character_accuracy": 0.636,
+      "duration_seconds": 0.03
+    },
+    {
+      "file_name": "in_plate_val_0005.jpg",
+      "detection_confidence": 0.27910706400871277,
+      "predicted_box": [
+        134,
+        438,
+        318,
+        541
+      ],
+      "ground_truth_boxes": [
+        [
+          141,
+          440,
+          317,
+          539
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "I94",
+      "ocr_confidence": 0.4612528356347786,
+      "character_accuracy": 0.2,
+      "duration_seconds": 0.032
+    },
+    {
+      "file_name": "in_plate_val_0006.jpg",
+      "detection_confidence": 0.2610217034816742,
+      "predicted_box": [
+        83,
+        448,
+        263,
+        553
+      ],
+      "ground_truth_boxes": [
+        [
+          89,
+          444,
+          262,
+          548
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "1I94",
+      "ocr_confidence": 0.7466868758201599,
+      "character_accuracy": 0.2,
+      "duration_seconds": 0.028
+    },
+    {
+      "file_name": "in_plate_val_0007.jpg",
+      "detection_confidence": 0.2831130027770996,
+      "predicted_box": [
+        94,
+        462,
+        274,
+        565
+      ],
+      "ground_truth_boxes": [
+        [
+          100,
+          464,
+          272,
+          564
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "HHUQER9A94",
+      "ocr_confidence": 0.2548496988952843,
+      "character_accuracy": 0.6,
+      "duration_seconds": 0.029
+    },
+    {
+      "file_name": "in_plate_val_0008.jpg",
+      "detection_confidence": 0.2681450843811035,
+      "predicted_box": [
+        67,
+        476,
+        242,
+        579
+      ],
+      "ground_truth_boxes": [
+        [
+          68,
+          477,
+          243,
+          574
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "FHH02ER9494",
+      "ocr_confidence": 0.46940265293633887,
+      "character_accuracy": 0.727,
+      "duration_seconds": 0.028
+    },
+    {
+      "file_name": "in_plate_val_0009.jpg",
+      "detection_confidence": 0.27229318022727966,
+      "predicted_box": [
+        56,
+        488,
+        229,
+        588
+      ],
+      "ground_truth_boxes": [
+        [
+          59,
+          487,
+          230,
+          587
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "1I94",
+      "ocr_confidence": 0.4310723543167114,
+      "character_accuracy": 0.2,
+      "duration_seconds": 0.027
+    },
+    {
+      "file_name": "in_plate_val_0010.jpg",
+      "detection_confidence": 0.2608991265296936,
+      "predicted_box": [
+        76,
+        494,
+        248,
+        602
+      ],
+      "ground_truth_boxes": [
+        [
+          82,
+          496,
+          248,
+          602
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "194",
+      "ocr_confidence": 0.7455376120203628,
+      "character_accuracy": 0.3,
+      "duration_seconds": 0.028
+    },
+    {
+      "file_name": "in_plate_val_0011.jpg",
+      "detection_confidence": 0.2674769163131714,
+      "predicted_box": [
+        786,
+        335,
+        912,
+        441
+      ],
+      "ground_truth_boxes": [
+        [
+          138,
+          496,
+          274,
+          615
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "ER9194",
+      "ocr_confidence": 0.9985794270818111,
+      "character_accuracy": 0.6,
+      "duration_seconds": 0.032
+    },
+    {
+      "file_name": "in_plate_val_0012.jpg",
+      "detection_confidence": 0.2800505459308624,
+      "predicted_box": [
+        502,
+        351,
+        685,
+        480
+      ],
+      "ground_truth_boxes": [
+        [
+          502,
+          352,
+          685,
+          477
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH02ER9194"
+      ],
+      "predicted_text": "ER9194",
+      "ocr_confidence": 0.9821660292335819,
+      "character_accuracy": 0.6,
+      "duration_seconds": 0.031
+    },
+    {
+      "file_name": "in_plate_val_0013.jpg",
+      "detection_confidence": 0.3167596757411957,
+      "predicted_box": [
+        115,
+        216,
+        211,
+        243
+      ],
+      "ground_truth_boxes": [
+        [
+          114,
+          217,
+          213,
+          245
+        ]
+      ],
+      "ground_truth_plates": [
+        "GJ12FA0735"
+      ],
+      "predicted_text": null,
+      "ocr_confidence": null,
+      "character_accuracy": null,
+      "duration_seconds": 0.025
+    },
+    {
+      "file_name": "in_plate_val_0016.jpg",
+      "detection_confidence": 0.2666443884372711,
+      "predicted_box": [
+        339,
+        462,
+        492,
+        543
+      ],
+      "ground_truth_boxes": [
+        [
+          341,
+          463,
+          491,
+          541
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH04DW9020"
+      ],
+      "predicted_text": "MH04",
+      "ocr_confidence": 0.9202561974525452,
+      "character_accuracy": 0.4,
+      "duration_seconds": 0.037
+    },
+    {
+      "file_name": "in_plate_val_0017.jpg",
+      "detection_confidence": 0.277299165725708,
+      "predicted_box": [
+        426,
+        463,
+        592,
+        545
+      ],
+      "ground_truth_boxes": [
+        [
+          426,
+          459,
+          593,
+          551
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH04DW9020"
+      ],
+      "predicted_text": "MH04",
+      "ocr_confidence": 0.8464903831481934,
+      "character_accuracy": 0.4,
+      "duration_seconds": 0.03
+    },
+    {
+      "file_name": "in_plate_val_0018.jpg",
+      "detection_confidence": 0.29778027534484863,
+      "predicted_box": [
+        402,
+        469,
+        584,
+        557
+      ],
+      "ground_truth_boxes": [
+        [
+          401,
+          471,
+          587,
+          560
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH04DW9020"
+      ],
+      "predicted_text": "MK04",
+      "ocr_confidence": 0.8043368458747864,
+      "character_accuracy": 0.3,
+      "duration_seconds": 0.033
+    },
+    {
+      "file_name": "in_plate_val_0019.jpg",
+      "detection_confidence": 0.2745155692100525,
+      "predicted_box": [
+        342,
+        470,
+        535,
+        564
+      ],
+      "ground_truth_boxes": [
+        [
+          340,
+          469,
+          538,
+          569
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH04DW9020"
+      ],
+      "predicted_text": "DW9020",
+      "ocr_confidence": 0.9159628782719418,
+      "character_accuracy": 0.6,
+      "duration_seconds": 0.033
+    },
+    {
+      "file_name": "in_plate_val_0020.jpg",
+      "detection_confidence": 0.27781909704208374,
+      "predicted_box": [
+        264,
+        473,
+        477,
+        573
+      ],
+      "ground_truth_boxes": [
+        [
+          262,
+          476,
+          476,
+          576
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH04DW9020"
+      ],
+      "predicted_text": "MH04",
+      "ocr_confidence": 0.912755012512207,
+      "character_accuracy": 0.4,
+      "duration_seconds": 0.032
+    },
+    {
+      "file_name": "in_plate_val_0021.jpg",
+      "detection_confidence": 0.2777780294418335,
+      "predicted_box": [
+        168,
+        472,
+        405,
+        583
+      ],
+      "ground_truth_boxes": [
+        [
+          170,
+          473,
+          405,
+          582
+        ]
+      ],
+      "ground_truth_plates": [
+        "MH04DW9020"
+      ],
+      "predicted_text": "MH04",
+      "ocr_confidence": 0.993893563747406,
+      "character_accuracy": 0.4,
+      "duration_seconds": 0.032
+    }
+  ]
 }

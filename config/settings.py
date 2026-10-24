@@ -3,6 +3,10 @@ import os
 import secrets
 
 from dotenv import load_dotenv
+import certifi
+
+if "SSL_CERT_FILE" not in os.environ:
+    os.environ["SSL_CERT_FILE"] = certifi.where()
 
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
@@ -11,8 +15,10 @@ load_dotenv(ROOT / ".env")
 class Settings:
     SECRET_KEY = os.getenv("SECRET_KEY") or secrets.token_hex(32)
     MAX_CONTENT_LENGTH = int(os.getenv("MAX_UPLOAD_MB", "100")) * 1024 * 1024
-    DATABASE_PATH = Path(os.getenv("DATABASE_PATH", str(ROOT / "database" / "anpr.sqlite3")))
-    MODEL_PATH = Path(os.getenv("PLATE_MODEL_PATH", str(ROOT / "models" / "best.pt")))
+    _db_env = os.getenv("DATABASE_PATH", "database/anpr.sqlite3")
+    DATABASE_PATH = Path(_db_env) if Path(_db_env).is_absolute() else (ROOT / _db_env).resolve()
+    _model_env = os.getenv("PLATE_MODEL_PATH", "models/best.pt")
+    MODEL_PATH = Path(_model_env) if Path(_model_env).is_absolute() else (ROOT / _model_env).resolve()
     UPLOAD_IMAGE_DIR = ROOT / "uploads" / "images"
     UPLOAD_VIDEO_DIR = ROOT / "uploads" / "videos"
     ANNOTATED_DIR = ROOT / "output" / "annotated"
